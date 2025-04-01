@@ -393,7 +393,7 @@ The description should be factual, clear, and objective.
         try:
             # Call the OpenAI API
             response = self.openai_client.chat.completions.create(
-                model=self.config.get("openai_model", "gpt-4-turbo-preview"),
+                model=self.config.get("openai_model", "gpt-4o-2024-08-06"),
                 messages=[
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": user_prompt}

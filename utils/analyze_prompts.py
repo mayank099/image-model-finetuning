@@ -65,7 +65,7 @@ def generate_new_prompts(
     output_file: Optional[str] = None,
     num_prompts: int = 5,
     subject_name: Optional[str] = None,
-    openai_model: str = "gpt-4-turbo-preview",
+    openai_model: str = "gpt-4o-2024-08-06",
     config_path: Optional[str] = None
 ) -> Tuple[List[str], str]:
     """
@@ -154,7 +154,7 @@ if __name__ == "__main__":
                         help="Number of prompts to generate")
     parser.add_argument("--subject", help="Name of the subject in the images")
     parser.add_argument("--model", help="OpenAI model to use",
-                        default="gpt-4-turbo-preview")
+                        default="gpt-4o-2024-08-06")
     parser.add_argument("--analyze-only", action="store_true",
                         help="Only analyze, don't generate prompts")
     parser.add_argument("--config", help="Path to config file")

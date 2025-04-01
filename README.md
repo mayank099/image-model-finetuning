@@ -61,7 +61,7 @@ training_steps = 1000
 # Prompt generation settings
 subject_name = Mayank
 num_prompts = 5
-openai_model = gpt-4-turbo-preview
+openai_model = gpt-4o-2024-08-06
 ```
 
 ## Usage

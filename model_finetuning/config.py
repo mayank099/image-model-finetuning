@@ -29,8 +29,8 @@ class ConfigManager:
             "padding_color": (0, 0, 0),  # Black
 
             # Model training
-            "replicate_username": "",
-            "model_name": "flux-personal-model",  # Update Model Name
+            "replicate_username": "mayank099",
+            "model_name": "flux-new-ft",  # Update Model Name (Pass in Params)
             "model_visibility": "public",
             "model_description": "FLUX.1 finetuned on personal photos",
             "training_steps": 1000,
@@ -38,7 +38,7 @@ class ConfigManager:
             # Prompt generation
             "subject_name": "Mayank",
             "num_prompts": 5,
-            "openai_model": "gpt-4-turbo-preview"  # Update Model Name
+            "openai_model": "gpt-4o-2024-08-06"
         }
 
         # Load custom configuration if provided
