@@ -19,7 +19,7 @@ This project provides a modular, configurable pipeline for fine-tuning AI image 
 ### Option 1: Install from GitHub
 
 ```bash
-git clone https://github.com/yourusername/image_model_finetuning.git
+git clone https://github.com/mayank099/image-model-finetuning.git
 cd image_model_finetuning
 pip install -e .
 ```
@@ -114,7 +114,7 @@ Processed_Images/          # Created by the pipeline
 └── ...
 
 Output/                    # Created by the pipeline
-├── training_data.zip      # ZIP file for training
+├── data.zip      # ZIP file for training
 ├── new_generation_prompts.txt  # Additional creative prompts
 └── ...
 ```
@@ -155,7 +155,7 @@ This package supports a 3-step workflow for creating custom image generation mod
 The full workflow looks like this:
 
 ```
-Raw Images → Process Images → Generate Descriptions → Train Model → Custom AI Model
+Raw Images → Process Images → Generate Descriptions → Train Model → Custom AI Model (via Replicate)
 ```
 
 You can also add optional steps like prompt analysis and creative prompt generation to enhance your training data.
@@ -165,22 +165,45 @@ You can also add optional steps like prompt analysis and creative prompt generat
 The code is organized into a modular package structure:
 
 ```
-image_model_finetuning/
-├── __init__.py            # Package initialization
-├── config.py              # Configuration management
-├── image_processor.py     # Image processing functionality
-├── prompt_analyzer.py     # Description generation and analysis
-├── model_trainer.py       # Model training on Replicate
-├── pipeline.py            # Pipeline orchestration
-├── cli.py                 # Command-line interface
-├── templates/             # Template files
-│   └── description_template.txt  # Default template for descriptions
-└── utils/                 # Utility scripts and functions
-    ├── __init__.py
-    ├── process_images.py
-    ├── generate_descriptions.py
-    ├── analyze_prompts.py
-    └── train_model.py
+image-model-finetuning/
+├── data/                     # Data directories (Excluded from Git)
+│   ├── output/               # Output files and training data
+│   ├── processed_images/     # Processed images with descriptions
+│   └── raw_images/           # Input images
+│
+├── examples/                 # Example scripts
+│   ├── init.py               # Package initialization for examples
+│   ├── basic_usage.py        # Basic pipeline example
+│   └── custom_workflow.py    # Custom workflow example
+│
+├── model_finetuning/         # Main package directory
+│   ├── pycache/              # Python cache files
+│   ├── templates/            # Template files
+│   │   ├── init.py           # Package initialization for templates
+│   │   ├── description_template.txt  # Template for image descriptions
+│   │   ├── system_prompt_template.txt  # Template for system prompts
+│   │   └── user_prompt_template.txt    # Template for user prompts
+│   │
+│   ├── init.py               # Package initialization
+│   ├── cli.py                # Command-line interface
+│   ├── config.py             # Configuration management
+│   ├── image_processor.py    # Image processing functionality
+│   ├── model_trainer.py      # Model training on Replicate
+│   ├── pipeline.py           # Pipeline orchestration
+│   └── prompt_analyzer.py    # Description generation and analysis
+│
+├── utils/                    # Utility scripts and functions
+│   ├── pycache/              # Python cache files
+│   ├── init.py               # Utility module initialization
+│   ├── analyze_prompts.py    # Prompt analysis utility
+│   ├── generate_descriptions.py  # Description generation utility
+│   ├── process_images.py     # Image processing utility
+│   └── train_model.py        # Model training utility
+│
+├── config.ini                # Configuration settings
+├── README.md                 # Project documentation
+├── requirements.txt          # Package dependencies
+└── setup.py                  # Package installation script
 ```
 
 The modular design allows you to use the package as a whole or import specific components for custom workflows.
