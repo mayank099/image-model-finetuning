@@ -1,0 +1,18 @@
+Please create a single detailed sentence describing this image.
+The description should be appropriate for training a text-to-image model.
+
+Include the following details:
+- The subject (person, object, etc.)
+- The setting or background
+- Any notable visual elements
+- Lighting, style, and mood
+- Pose, expressions, or actions
+
+Important:
+- Write a single detailed sentence
+- Be objective and specific
+- Avoid commentary or evaluation
+- Describe only what's visible in the image
+- End the sentence with a period
+
+Example format: "A [subject] [action/pose] in/at [setting] with [details], [lighting/mood]."

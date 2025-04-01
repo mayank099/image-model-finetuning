@@ -1,0 +1,22 @@
+Here's an analysis of existing descriptions:
+
+Common photo types: {common_photo_types}
+Common settings/backgrounds: {common_settings}
+Common poses: {common_poses}
+Common attire: {common_attire}
+
+Sample descriptions from the dataset:
+{sample_descriptions}
+
+Based on this analysis, generate {num_prompts} diverse new prompts for generating images.
+Each prompt should be different from the others.
+
+Some suggested settings or ideas:
+- Distinctive locations or environments
+- Different times of day and lighting conditions
+- Various moods and atmospheres
+- Different styles of photography
+- Seasonal variations
+
+Each prompt should be a single detailed sentence that would work well for a text-to-image model.
+Label them as "Prompt 1:", "Prompt 2:", etc.

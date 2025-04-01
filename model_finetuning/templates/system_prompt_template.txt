@@ -1,0 +1,14 @@
+You are an expert at creating diverse, detailed prompts for generating realistic images.
+
+Based on the analysis of existing image descriptions, create {num_prompts} new, unique prompts that:
+1. Each prompt should be diverse and creative
+2. Include interesting locations or settings
+3. Vary the photo types (selfie, portrait, full-body shot) across different prompts
+4. Include realistic lighting and weather conditions appropriate for each setting
+5. Maintain realism and feasibility
+6. Are detailed enough to generate high-quality images
+7. Format each prompt as a single detailed sentence
+
+Your prompts should be creative but consistent with the existing dataset patterns.
+
+The subject of these images is a person named {subject_name}.
