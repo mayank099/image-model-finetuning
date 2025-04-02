@@ -3,15 +3,16 @@ Basic usage example of the image model fine-tuning pipeline.
 """
 
 import os
+from pathlib import Path
 from dotenv import load_dotenv
 from model_finetuning import PipelineManager
-
-# Load environment variables for API keys
-load_dotenv()
+from utils.pipeline_utils import load_env_file
 
 
 def main():
     """Run a basic pipeline with default settings."""
+    # Load environment variables
+    load_env_file()
     # Initialize the pipeline
     pipeline = PipelineManager()
 

@@ -3,6 +3,7 @@ Example of a custom workflow using the image model fine-tuning utilities.
 """
 
 import os
+from pathlib import Path
 from dotenv import load_dotenv
 from utils import (
     process_images,
@@ -11,9 +12,7 @@ from utils import (
     generate_new_prompts,
     train_model
 )
-
-# Load environment variables for API keys
-load_dotenv()
+from utils.pipeline_utils import load_env_file
 
 
 def custom_workflow():
@@ -21,6 +20,8 @@ def custom_workflow():
     Run a custom workflow using the individual utility functions.
     This demonstrates how to build a custom pipeline for specific needs.
     """
+    # Load environment variables
+    load_env_file()
     # Define directories
     raw_dir = os.path.expanduser(
         "~/Desktop/Image_Model_Training/image-model-finetuning/data/raw_images")

@@ -4,7 +4,7 @@ Utility functions for training models on Replicate.
 
 import os
 from typing import Optional, Any, Tuple
-from dotenv import load_dotenv
+from utils.pipeline_utils import load_env_file
 from model_finetuning import ConfigManager, ModelTrainer
 
 
@@ -25,7 +25,7 @@ def create_training_data(
         Path to the created ZIP file
     """
     # Load environment variables
-    load_dotenv()
+    load_env_file()
 
     # Create configuration
     config = ConfigManager(config_path)
@@ -76,7 +76,7 @@ def train_model(
         Tuple of (model object, training object)
     """
     # Load environment variables
-    load_dotenv()
+    load_env_file()
 
     # Check if REPLICATE_API_TOKEN is set
     if not os.environ.get("REPLICATE_API_TOKEN"):

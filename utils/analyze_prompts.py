@@ -4,7 +4,7 @@ Utility functions for analyzing and generating prompts.
 
 import os
 from typing import Optional, List, Dict, Any, Tuple
-from dotenv import load_dotenv
+from utils.pipeline_utils import load_env_file
 from model_finetuning import ConfigManager, PromptAnalyzer
 
 
@@ -25,7 +25,7 @@ def analyze_prompts(
         Tuple of (analysis dictionary, list of descriptions)
     """
     # Load environment variables
-    load_dotenv()
+    load_env_file()
 
     # Create configuration
     config = ConfigManager(config_path)
@@ -85,7 +85,7 @@ def generate_new_prompts(
         Tuple of (list of prompts, path to output file)
     """
     # Load environment variables
-    load_dotenv()
+    load_env_file()
 
     # Check if OPENAI_API_KEY is set
     if not os.environ.get("OPENAI_API_KEY"):

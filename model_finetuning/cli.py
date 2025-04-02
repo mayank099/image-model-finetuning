@@ -8,12 +8,13 @@ import os
 from dotenv import load_dotenv
 
 from .pipeline import PipelineManager
+from utils.pipeline_utils import load_env_file
 
 
 def main():
     """Entry point for the command-line interface."""
     # Load environment variables from .env file
-    load_dotenv()
+    load_env_file()
 
     parser = argparse.ArgumentParser(
         description="Image Model Fine-Tuning Pipeline",

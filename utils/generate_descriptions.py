@@ -13,7 +13,7 @@ def generate_descriptions(
     output_dir: Optional[str] = None,
     template_file: Optional[str] = None,
     subject_name: Optional[str] = None,
-    openai_model: str = "gpt-4-vision-preview",
+    openai_model: str = "gpt-4o-2024-08-06",
     overwrite: bool = False,
     config_path: Optional[str] = None
 ) -> List[str]:
@@ -101,7 +101,7 @@ if __name__ == "__main__":
     parser.add_argument("--template", help="Path to description template")
     parser.add_argument("--subject", help="Name of the subject in the images")
     parser.add_argument("--model", help="OpenAI model to use",
-                        default="gpt-4-vision-preview")
+                        default="gpt-4o-2024-08-06")
     parser.add_argument("--overwrite", action="store_true",
                         help="Overwrite existing descriptions")
     parser.add_argument("--config", help="Path to config file")

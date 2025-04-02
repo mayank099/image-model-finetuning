@@ -35,6 +35,7 @@ class PromptAnalyzer:
             OpenAI client instance or None if API key is not set
         """
         api_key = os.environ.get("OPENAI_API_KEY")
+        print(f"Open AI API Key: {api_key}")
         if not api_key:
             print("Warning: OPENAI_API_KEY environment variable not set.")
             print("Description generation features will not work without an API key.")
@@ -183,7 +184,7 @@ The description should be factual, clear, and objective.
                 # Create the API request
                 response = self.openai_client.chat.completions.create(
                     model=self.config.get(
-                        "openai_model", "gpt-4-vision-preview"),
+                        "openai_model", "gpt-4o-2024-08-06"),
                     messages=[
                         {
                             "role": "system",
