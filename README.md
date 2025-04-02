@@ -9,7 +9,7 @@ This project provides a modular, configurable pipeline for fine-tuning AI image 
 ## Features
 
 - **Image Processing**: Resize and pad images to consistent dimensions while maintaining aspect ratio
-- **AI Description Generation**: Automatically generate detailed descriptions for images using OpenAI's vision models
+- **AI Description Generation**: Automatically generate detailed descriptions for images using OpenAI's GPT 4o model
 - **Description Analysis**: Analyze image descriptions to identify patterns
 - **Prompt Generation**: Generate new, creative prompts for image generation using OpenAI
 - **Model Training**: Fine-tune image generation models on Replicate
@@ -148,7 +148,7 @@ This package supports a 3-step workflow for creating custom image generation mod
 
 1. **Image Processing**: Raw images are resized, padded, and prepared for training.
 
-2. **Description Generation**: OpenAI's vision models analyze each image and create detailed descriptions.
+2. **Description Generation**: OpenAI's GPT 4o model models analyze each image and create detailed descriptions.
 
 3. **Model Training**: Processed images and their descriptions are used to fine-tune an image generation model on Replicate.
 
